@@ -18,6 +18,7 @@ module.exports = {
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
         navigateFallback: 'index.html',
+    //    swSrc:"src/service-worker.js"
     },
     // configure the workbox plugin
     // workboxPluginMode: 'InjectManifest',
