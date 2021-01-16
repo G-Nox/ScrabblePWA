@@ -19,19 +19,28 @@
 import Grid from "../components/v-grid";
 import Hand from "../components/v-hand";
 import Info from "../components/v-info";
+import router from "../router/index";
 
 export default {
   name: "ScrabblePage",
   components: {
     Grid,
     Hand,
-    Info,
+    Info
   },
   computed: {
     isConnected() {
       return this.$store.state.isConnected;
-    },
+    }
   },
+  mounted() {
+    this.$store.dispatch("connectWebsocket");
+    setTimeout(function() {
+      if (!this.isConnected) {
+        router.push("Offline");
+      }
+    }, 500);
+  }
 };
 </script>
 
