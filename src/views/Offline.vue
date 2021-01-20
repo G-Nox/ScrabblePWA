@@ -10,3 +10,23 @@
     </div>
   </div>
 </template>
+
+<script>
+import router from "../router/index";
+
+export default {
+  computed: {
+    isConnected() {
+      return this.$store.state.isConnected;
+    }
+  },
+  watch: {
+    // eslint-disable-next-line no-unused-vars
+    isConnected: function(newVal, oldVal) {
+      if (newVal) {
+        router.push("Scrabble");
+      }
+    }
+  }
+};
+</script>

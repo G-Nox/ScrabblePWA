@@ -34,12 +34,15 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch("connectWebsocket");
-    setTimeout(function() {
-      if (!this.isConnected) {
-        router.push("Offline");
-      }
-    }, 500);
+    if (!this.isConnected) {
+      this.$store.dispatch("connectWebsocket");
+    }
+  },
+  beforeUpdate() {
+    console.log(this.isConnected);
+    if (!this.isConnected) {
+      router.push("Offline");
+    }
   }
 };
 </script>
