@@ -16,14 +16,7 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: "black",
     workboxPluginMode: "InjectManifest",
     workboxOptions: {
-<<<<<<< HEAD
-        skipWaiting: true,
-        navigateFallback: 'index.html',
-        clientsClaim: true,
-    //    swSrc:"src/service-worker.js"
-=======
       swSrc: "src/service-worker-old.js"
->>>>>>> 2a433263b2ea255d6d43c4f8656a11bdc46f502a
     },
     // configure the workbox plugin
     // workboxPluginMode: 'InjectManifest',
