@@ -79,7 +79,7 @@ const store = new Vuex.Store({
   },
   actions: {
     async connectWebsocket({ dispatch, commit }) {
-      webSocket = new WebSocket("ws://localhost:9000/websocket");
+      webSocket = new WebSocket("ws://math-scrabble.herokuapp.com/websocket");
       console.info("Connecting to WebSocket...");
 
       webSocket.onopen = () => {
