@@ -15,7 +15,7 @@
       <router-link class="mr-2" to="/">
         <v-btn class="white--text primary" target="_blank" text> Home </v-btn>
       </router-link>
-      <router-link class="mr-2" to="/scrabble">
+      <router-link class="mr-2" to="/Scrabble">
         <v-btn class="white--text primary" target="_blank" text> Play </v-btn>
       </router-link>
     </v-app-bar>
@@ -37,11 +37,7 @@ export default {
   computed: {
     theme() {
       return this.$vuetify.theme.dark ? "dark" : "light";
-    },
-  },
-
-  mounted() {
-    this.$store.dispatch("connectWebsocket");
-  },
+    }
+  }
 };
 </script>
