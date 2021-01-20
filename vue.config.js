@@ -17,7 +17,9 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: 'black',
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
+        skipWaiting: true,
         navigateFallback: 'index.html',
+        clientsClaim: true,
     //    swSrc:"src/service-worker.js"
     },
     // configure the workbox plugin
